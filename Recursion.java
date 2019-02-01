@@ -27,7 +27,7 @@ public class Recursion{
      */
     public static void main(String[] args){
       for(int i=0;i<5;i++){
-      System.out.print(fib(i)+" ");
+      System.out.print(makeAllSums(i)+" ");
       }
     }
     public static int fib(int n){
@@ -53,11 +53,17 @@ public class Recursion{
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
       if(n==0){
-        ArrayList<Integer> a = new ArrayList<Integer();
+        ArrayList<Integer> a = new ArrayList<Integer>();
         a.add(0);
         return a;
       }
-      return null;
+      ArrayList a = makeAllSums(n-1);
+      ArrayList b = new ArrayList<Integer>(a);
+      for(int i=0;i<b.size();i++){
+        b.get(i)=b.get(i)+n;
+      }
+      a.addAll(b);
+      return a;
     }
 
 }
