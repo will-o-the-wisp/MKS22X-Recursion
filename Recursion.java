@@ -25,11 +25,14 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-
+      return fibh(n,0);
     }
-
+    private static int fibh(int n, int i){
+      return 0;
+    }
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
+      return null;
     }
 
 }
