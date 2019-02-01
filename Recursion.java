@@ -24,6 +24,11 @@ public class Recursion{
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
      *precondition: n is non-negative
      */
+    public static void main(String[] args){
+      for(int i=0;i<7;i++){
+      System.out.print(fib(i)+" ");
+      }
+    }
     public static int fib(int n){
       return fibh(n,1,1,0);
     }
