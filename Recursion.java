@@ -26,12 +26,20 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static void main(String[] args){
-      for(int i=0;i<200;i++){
+      for(int i=0;i<5;i++){
       System.out.print(fib(i)+" ");
       }
     }
     public static int fib(int n){
       return fibh(n,1,1,0);
+    }
+    private static String toString(ArrayList a){
+      String ans = "[";
+      for(int i;i<a.size();i++){
+        ans+=a.get(i)+" ,";
+      }
+      ans+="]";
+      return ans;
     }
     private static int fibh(int n, int i, int j, int ct){
       if(n<2){
@@ -47,6 +55,7 @@ public class Recursion{
       if(n==0){
         ArrayList<Integer> a = new ArrayList<Integer();
         a.add(0);
+        return a;
       }
       return null;
     }
