@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Recursion{
     /*You may write additional private methods */
 
@@ -37,7 +38,7 @@ public class Recursion{
       if(n<2){
         return 1;
       }
-      if(ct==n){
+      if(ct==n-1){
         return j;
       }
       return fibh(n,j,i+j,ct+1);
