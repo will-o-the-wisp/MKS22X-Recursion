@@ -35,7 +35,7 @@ public class Recursion{
     }
     private static String toString(ArrayList a){
       String ans = "[";
-      for(int i;i<a.size();i++){
+      for(int i=0;i<a.size();i++){
         ans+=a.get(i)+" ,";
       }
       ans+="]";
@@ -60,7 +60,8 @@ public class Recursion{
       ArrayList a = makeAllSums(n-1);
       ArrayList b = new ArrayList<Integer>(a);
       for(int i=0;i<b.size();i++){
-        b.get(i)=b.get(i)+n;
+        b.set(i,(int)(b.get(i))+n);
+
       }
       a.addAll(b);
       return a;
