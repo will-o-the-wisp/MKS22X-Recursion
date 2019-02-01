@@ -26,14 +26,13 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static void main(String[] args){
-      for(int i=0;i<7;i++){
+      for(int i=0;i<200;i++){
       System.out.print(fib(i)+" ");
       }
     }
     public static int fib(int n){
       return fibh(n,1,1,0);
     }
-    //i and j represent the two fibonacci numbers before n;
     private static int fibh(int n, int i, int j, int ct){
       if(n<2){
         return 1;
@@ -44,7 +43,11 @@ public class Recursion{
       return fibh(n,j,i+j,ct+1);
     }
     /*As Per classwork*/
-    public static ArrayList<Integer> makeAllSums(){
+    public static ArrayList<Integer> makeAllSums(int n){
+      if(n==0){
+        ArrayList<Integer> a = new ArrayList<Integer();
+        a.add(0);
+      }
       return null;
     }
 
